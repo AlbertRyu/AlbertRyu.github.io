@@ -764,7 +764,7 @@ em {
   margin-right: auto;
   border: 2px solid #ddd; /* 灰色边框 */
   border-radius: 10px; /* 圆角边框 */
-  padding: 10px; /* 内边距，避免边框紧贴截图 */
+  padding: 5px; /* 内边距，避免边框紧贴截图 */
   background-color: white; /* 背景色让截图更突出 */
   width: 90%; /* 宽度100% */
 }

@@ -30,6 +30,12 @@ layout: base
     {{ content }}
   </div>
 
+  {% if page.language == "chinese" %}
+    <p class="word-count"> 字数统计: {{ content | char_count }}</p>
+  {% else page.language == "english" %}
+    <p class="word-count"> Word Count: {{ content | word_count }}</p>
+  {% endif %}
+
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

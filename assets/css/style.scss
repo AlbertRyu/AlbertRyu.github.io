@@ -5,3 +5,33 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+.site-title {
+  @include relative-font-size(1.25);
+}
+
+em {
+  display: block;
+  text-align: center;
+  font-style: normal;
+  font-size: 80%;
+  padding: 0;
+  color: #6d6c6c;
+}
+
+.styled-image {
+  border: 1px solid black;
+  float: center;
+  width: 80%;
+  border-radius: 15px;
+  display: block;
+  margin: 10px auto;
+}
+
+.chinese-post {
+  font-family: "Noto Serif SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  text-align: justify;
+}

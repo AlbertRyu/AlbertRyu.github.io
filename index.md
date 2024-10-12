@@ -7,4 +7,4 @@
 #
 layout: home
 ---
-So this it is.
+So here it is, where everything begins.

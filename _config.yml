@@ -1,12 +1,13 @@
 title: Gibberish from a Physics Student
 author:
   name: A physics student
-  email: yunxiao.liu@tum.de
+  email: yunxiao.liu@proton.me
+  address: Munich, Germany
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  .The blog of a physics student who is trying to make sense of the world.
+  A place for me to share some personal thought while making sense of the world.
 
 # Build settings
 

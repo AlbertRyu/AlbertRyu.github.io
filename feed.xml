@@ -1,5 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-10-12T21:05:42+00:00</updated><id>/feed.xml</id><title type="html">Gibberish from a Physics Student</title><subtitle>A space to express personal insights and reflect on the world’s complexities. 
-</subtitle><author><name>A physics student</name><email>yunxiao.liu@proton.me</email></author><entry><title type="html">记账一年，反思与改变</title><link href="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html" rel="alternate" type="text/html" title="记账一年，反思与改变" /><published>2024-10-11T00:00:00+00:00</published><updated>2024-10-11T00:00:00+00:00</updated><id>/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0</id><content type="html" xml:base="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html"><![CDATA[<h2 id="一年前">一年前</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-10-17T20:30:28+00:00</updated><id>/feed.xml</id><title type="html">Gibberish from a Physics Student</title><subtitle>A space to express personal insights and reflect on the world’s complexities. 
+</subtitle><author><name>A physics student</name><email>yunxiao.liu@proton.me</email></author><entry><title type="html">混淆的量子力学术语</title><link href="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html" rel="alternate" type="text/html" title="混淆的量子力学术语" /><published>2024-10-17T00:00:00+00:00</published><updated>2024-10-17T00:00:00+00:00</updated><id>/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0</id><content type="html" xml:base="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html"><![CDATA[<p>从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望在写作这篇博客的过程中，一点点理清思路。</p>
+
+<h3 id="几对让我混淆的量子态描述">几对让我混淆的量子态描述</h3>
+
+<ul>
+  <li>量子态和波函数 （Quantum State &amp; Wavefunction）</li>
+  <li>纯态与混态 （Pure state &amp; Mix state）</li>
+  <li>纠缠态与可分离态（Entangled state &amp; Separable state）</li>
+  <li>线性叠加态 （Superposition state）</li>
+</ul>
+
+<h3 id="量子态和波函数">量子态和波函数</h3>
+
+<p>量子态是<strong>希尔伯特空间</strong><sup id="fnref:HilbertSpace" role="doc-noteref"><a href="#fn:HilbertSpace" class="footnote" rel="footnote">1</a></sup>中的一个向量，它是一个更通用，更普适的概念，通常用$\ket{\psi}$来表示。也就是说：
+$$\ket{\psi} \in\mathcal{H} $$</p>
+
+<p>而波函数，通常用$\psi$来表示，它是一个量子态$\ket{\psi}$在某个具体的基底上的投影，是一种数学表示。最常见的波函数$\psi(x)$是量子态在位置基底上的投影。换句话说，
+$$ \psi(x) = \braket{x|\psi}$$</p>
+
+<p>我们可以使用<strong>欧几里得空间</strong>来类比他们的关系，存在一个生存在三维欧几里得空间中的向量 $\vec{r}$ ，它有方向，有长度。但如果要进行实际计算，不得不选择一组基底，将他表示出来。它在笛卡尔坐标系下可以被表示为：
+$$ \vec{r} = 2 \vec{i} + 3\vec{j}+1\vec{k}$$
+在这里 ${\vec{i},\vec{j},\vec{k}}$ 就是一组基底，对应的
+$$ r(x) = \vec{i} \cdot \vec{r} \;\;\;\;\;\; r(y) = \vec{j} \cdot \vec{r} \;\;\;\;\;\; r(z) = \vec{k} \cdot \vec{r}$$</p>
+
+<h4 id="纯态和混合态">纯态和混合态</h4>
+
+<p>纯态和混合态是对一个量子系统的<strong>整体状态</strong>的描述。当我们说一个系统处在纯态当中时，我们指，这个系统处在一个确定的量子态中，换句话说，存在一个 $\ket{\psi}$，其完全包含了这个系统的所有信息。它可以是一个线性叠加态，比如：</p>
+
+<p>$$ \ket{\psi} = c_1\ket{a} + c_2\ket{b} $$</p>
+
+<p>也是一个纯态。根据哥本哈根诠释，对一个归一化的量子态，其各基矢前系数的平方等于测量时此量子态坍缩到这个基矢态的概率。可以说，线性叠加态正是纯态的一个典型形式。</p>
+
+<p>与之相对的混态。</p>
+
+<p>首先我们明确，只有纯态，也就是一个确定的量子态，我们才讨论其中是否有纠缠，是纠缠态还是可分离态。混态是一系列的态，如果一个系统处在混态当中，</p>
+
+<p>线性叠加态是<strong>纯态</strong>的一个典型形式。例如</p>
+
+<hr />
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:HilbertSpace" role="doc-endnote">
+      <p>希尔伯特空间是一个完备复向量空间，通常为无穷维，其内积有明确的定义。完备性和Cauchy序列相关，我从未弄明白其含义。 <a href="#fnref:HilbertSpace" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name>[&quot;A Physics Student&quot;]</name></author><category term="Quantum" /><category term="Physics" /><summary type="html"><![CDATA[从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望在写作这篇博客的过程中，一点点理清思路。]]></summary></entry><entry><title type="html">记账一年，反思与改变</title><link href="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html" rel="alternate" type="text/html" title="记账一年，反思与改变" /><published>2024-10-11T00:00:00+00:00</published><updated>2024-10-11T00:00:00+00:00</updated><id>/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0</id><content type="html" xml:base="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html"><![CDATA[<h2 id="一年前">一年前</h2>
 
 <p>2023年10月初到德国的时候，虽然金钱上依然是完全仰赖父母，但确实是人生中第一次需要自己直接承担包括房租、水电和饮食在内的所有支出。虽然可以用直接刷父母的信用卡解决，但为了锻炼自己的独立能力，最终选择了一次领到一整年的生活费，并自行规划的方式。通过网络查询，我估算自己在慕尼黑的生活需要1500欧元一月，也就是18000欧元一年，加上每年一次往返中德的机票，总共向上取整为15万元人民币的一年预算。</p>
 

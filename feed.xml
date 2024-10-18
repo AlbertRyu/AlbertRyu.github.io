@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-10-17T20:30:28+00:00</updated><id>/feed.xml</id><title type="html">Gibberish from a Physics Student</title><subtitle>A space to express personal insights and reflect on the world’s complexities. 
-</subtitle><author><name>A physics student</name><email>yunxiao.liu@proton.me</email></author><entry><title type="html">混淆的量子力学术语</title><link href="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html" rel="alternate" type="text/html" title="混淆的量子力学术语" /><published>2024-10-17T00:00:00+00:00</published><updated>2024-10-17T00:00:00+00:00</updated><id>/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0</id><content type="html" xml:base="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html"><![CDATA[<p>从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望在写作这篇博客的过程中，一点点理清思路。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-10-18T14:33:31+00:00</updated><id>/feed.xml</id><title type="html">Gibberish from a Physics Student</title><subtitle>A space to express personal insights and reflect on the world’s complexities. 
+</subtitle><author><name>A physics student</name><email>yunxiao.liu@proton.me</email></author><entry><title type="html">混淆的量子力学术语</title><link href="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html" rel="alternate" type="text/html" title="混淆的量子力学术语" /><published>2024-10-17T00:00:00+00:00</published><updated>2024-10-17T00:00:00+00:00</updated><id>/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0</id><content type="html" xml:base="/quantum/physics/2024/10/17/%E9%87%8F%E5%AD%90%E6%80%81%E7%9A%84%E6%8F%8F%E8%BF%B0.html"><![CDATA[<p>从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望写作这篇博客能帮我厘清思路。</p>
 
-<h3 id="几对让我混淆的量子态描述">几对让我混淆的量子态描述</h3>
+<h4 id="几对让我混淆的量子态描述"><strong>几对让我混淆的量子态描述</strong></h4>
 
 <ul>
   <li>量子态和波函数 （Quantum State &amp; Wavefunction）</li>
@@ -10,41 +10,66 @@
   <li>线性叠加态 （Superposition state）</li>
 </ul>
 
-<h3 id="量子态和波函数">量子态和波函数</h3>
+<h4 id="量子态和波函数"><strong>量子态和波函数</strong></h4>
 
 <p>量子态是<strong>希尔伯特空间</strong><sup id="fnref:HilbertSpace" role="doc-noteref"><a href="#fn:HilbertSpace" class="footnote" rel="footnote">1</a></sup>中的一个向量，它是一个更通用，更普适的概念，通常用$\ket{\psi}$来表示。也就是说：
 $$\ket{\psi} \in\mathcal{H} $$</p>
 
-<p>而波函数，通常用$\psi$来表示，它是一个量子态$\ket{\psi}$在某个具体的基底上的投影，是一种数学表示。最常见的波函数$\psi(x)$是量子态在位置基底上的投影。换句话说，
-$$ \psi(x) = \braket{x|\psi}$$</p>
+<p>而波函数，通常用$\psi$来表示，它是一个量子态$\ket{\psi}$在某个具体的基底上的投影，是一种数学表示。最常见的波函数$\psi(x)$是量子态在位置基底上的投影，它的平方等于粒子出现在$x$处的概率。用公式表达为，</p>
 
-<p>我们可以使用<strong>欧几里得空间</strong>来类比他们的关系，存在一个生存在三维欧几里得空间中的向量 $\vec{r}$ ，它有方向，有长度。但如果要进行实际计算，不得不选择一组基底，将他表示出来。它在笛卡尔坐标系下可以被表示为：
+<p>$$ \psi(x) = \braket{x|\psi}  \;\;\;\;\;\; P(x) = |{\psi(x)}|^2 $$</p>
+
+<p>基底根据实际需要选取。在研究自由粒子和散射时，动量基底被广泛使用。而在研究如同量子谐振子系统时，我们时常使用能量基底，用 $\psi(E)$ 或 $\psi_n$ 表示。</p>
+
+<p>我们可以使用<strong>欧几里得空间</strong>来不恰当的类比他们的关系，存在一个生存在三维欧几里得空间中的向量 $\vec{r}$ ，它有方向，有长度。但如果要进行实际计算，不得不选择一组基底将其表示出来。它在笛卡尔坐标系下可以被表示为：
 $$ \vec{r} = 2 \vec{i} + 3\vec{j}+1\vec{k}$$
 在这里 ${\vec{i},\vec{j},\vec{k}}$ 就是一组基底，对应的
 $$ r(x) = \vec{i} \cdot \vec{r} \;\;\;\;\;\; r(y) = \vec{j} \cdot \vec{r} \;\;\;\;\;\; r(z) = \vec{k} \cdot \vec{r}$$</p>
 
-<h4 id="纯态和混合态">纯态和混合态</h4>
+<h4 id="纯态和混合态"><strong>纯态和混合态</strong></h4>
 
-<p>纯态和混合态是对一个量子系统的<strong>整体状态</strong>的描述。当我们说一个系统处在纯态当中时，我们指，这个系统处在一个确定的量子态中，换句话说，存在一个 $\ket{\psi}$，其完全包含了这个系统的所有信息。它可以是一个线性叠加态，比如：</p>
+<p>纯态和混合态是对一个量子系统的<strong>整体状态</strong>的描述。当我们说一个系统处在纯态当中时，我们指，这个系统处在一个确定的量子态中，换句话说，存在一个 $\ket{\psi}$，其完全包含了这个系统的所有信息。</p>
 
-<p>$$ \ket{\psi} = c_1\ket{a} + c_2\ket{b} $$</p>
+<p>假设一个量子系统，在0K时，唯一可能态是其能量基态，那此时系统便处在一个确定的量子态中，也就是能量基态 $\ket{gs}$ ，它包含了系统的全部信息。且存在密度算符 $\hat{\rho} = \ket{gs}\bra{gs}$，同样包含了系统的全部信息。</p>
 
-<p>也是一个纯态。根据哥本哈根诠释，对一个归一化的量子态，其各基矢前系数的平方等于测量时此量子态坍缩到这个基矢态的概率。可以说，线性叠加态正是纯态的一个典型形式。</p>
+<p>但是，如果此时我们上升到有限温度，且达到热平衡之后。除了基态之外，系统还可能处在一系列的激发态中，他们的概率依照<strong>玻尔兹曼分布</strong><sup id="fnref:Boltzmann" role="doc-noteref"><a href="#fn:Boltzmann" class="footnote" rel="footnote">2</a></sup>决定。此时，系统处在一些列的量子态的概率混合当中，无法确定任何一个量子态，足以完全包含系统的信息。则系统必须要用一个密度算符,</p>
 
-<p>与之相对的混态。</p>
+<p>$$\hat{\rho} = \sum_iP_i\ket{\psi_i}\bra{\psi_i}$$</p>
 
-<p>首先我们明确，只有纯态，也就是一个确定的量子态，我们才讨论其中是否有纠缠，是纠缠态还是可分离态。混态是一系列的态，如果一个系统处在混态当中，</p>
+<p>才能完整的描述。值得注意的是，线性叠加态并不是混态，比如在双自旋粒子的海森堡系统当中，若 $J&gt;0$，则单态是其基态。
+$$\ket{0,0} = \frac{1}{\sqrt{2}}(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}) $$</p>
 
-<p>线性叠加态是<strong>纯态</strong>的一个典型形式。例如</p>
+<p>然而，虽然系统处在哪一种自旋配置当中不确定，但它并非一个混态，而是一个单态。因为系统唯一的处于 $\ket{0,0}$ 单态当中。其实，线性叠加态正是<strong>纯态</strong>的一个典型形式。</p>
+
+<p>那我们知道了，处于纯态中的系统可以用一个态矢或是密度算符来描述。而处于混态中的系统必须要使用密度算符来描述。假设获得一个密度算符，如何确定它是纯态还是混态呢？举个例子，以下两个密度算符，纯态和混态各有其一，分别是哪一个呢？</p>
+
+<p>$$\hat{\rho_1} = \frac{1}{2}(\ket{\uparrow\downarrow}\bra{\uparrow\downarrow}-\ket{\downarrow\uparrow}\bra{\uparrow\downarrow}-\ket{\uparrow\downarrow}\bra{\downarrow\uparrow}+\ket{\downarrow\uparrow}\bra{\downarrow\uparrow}) $$</p>
+
+<p>$$\hat{\rho_2} = \frac{1}{2}(\ket{\uparrow}\bra{\downarrow}+\ket{\downarrow}\bra{\uparrow}) $$</p>
+
+<p>答案是，除非你有传奇般的数学直觉，没有方法可以看出，只能通过计算得出。检查的方法是用算符作用于其自身，若返回本身，则为纯态，反之则为混态。</p>
+
+<p>$$ \hat{\rho}^2 = \hat{\rho} \;\; (pure \;state)$$</p>
+
+<p>$$ \hat{\rho}^2 \neq \hat{\rho} \;\; (mix \;state)$$</p>
+
+<p>根据计算，能够得出，$\hat{\rho_1}$ 为纯态，它也就是前文中单态的密度算符，而 $\hat{\rho_2}$ 是一个混态。</p>
+
+<h4 id="纠缠态和可分离态"><strong>纠缠态和可分离态</strong></h4>
+<p>To be cont.</p>
 
 <hr />
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:HilbertSpace" role="doc-endnote">
       <p>希尔伯特空间是一个完备复向量空间，通常为无穷维，其内积有明确的定义。完备性和Cauchy序列相关，我从未弄明白其含义。 <a href="#fnref:HilbertSpace" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
+    <li id="fn:Boltzmann" role="doc-endnote">
+      <p>玻尔兹曼概率分布是热力学和统计力学的核心概念，用于描述系统在热平衡状态下处于不同能量本征态的概率。 <a href="#fnref:Boltzmann" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
   </ol>
-</div>]]></content><author><name>[&quot;A Physics Student&quot;]</name></author><category term="Quantum" /><category term="Physics" /><summary type="html"><![CDATA[从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望在写作这篇博客的过程中，一点点理清思路。]]></summary></entry><entry><title type="html">记账一年，反思与改变</title><link href="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html" rel="alternate" type="text/html" title="记账一年，反思与改变" /><published>2024-10-11T00:00:00+00:00</published><updated>2024-10-11T00:00:00+00:00</updated><id>/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0</id><content type="html" xml:base="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html"><![CDATA[<h2 id="一年前">一年前</h2>
+</div>]]></content><author><name>[&quot;A Physics Student&quot;]</name></author><category term="Quantum" /><category term="Physics" /><summary type="html"><![CDATA[从本科开始，陆陆续续接触量子力学也已经有4年时间了。对描述一个量子态时所使用的有些概念，却依然还是混淆不清。我希望写作这篇博客能帮我厘清思路。]]></summary></entry><entry><title type="html">记账一年，反思与改变</title><link href="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html" rel="alternate" type="text/html" title="记账一年，反思与改变" /><published>2024-10-11T00:00:00+00:00</published><updated>2024-10-11T00:00:00+00:00</updated><id>/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0</id><content type="html" xml:base="/personal/finance/2024/10/11/%E8%B4%A2%E5%8A%A1%E7%B3%BB%E7%BB%9F%E9%9D%A9%E6%96%B0.html"><![CDATA[<h2 id="一年前">一年前</h2>
 
 <p>2023年10月初到德国的时候，虽然金钱上依然是完全仰赖父母，但确实是人生中第一次需要自己直接承担包括房租、水电和饮食在内的所有支出。虽然可以用直接刷父母的信用卡解决，但为了锻炼自己的独立能力，最终选择了一次领到一整年的生活费，并自行规划的方式。通过网络查询，我估算自己在慕尼黑的生活需要1500欧元一月，也就是18000欧元一年，加上每年一次往返中德的机票，总共向上取整为15万元人民币的一年预算。</p>
 
